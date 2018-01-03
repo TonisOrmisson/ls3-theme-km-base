@@ -26,13 +26,11 @@
                     {{ include('./subviews/header/nav_bar.twig') }}
                 {% endblock %}
 
-                {# Top Container: in this template, it contains only  #}
-                {% block progress %}
-                    {{ include('./subviews/header/progress_bar.twig') }}
-                {% endblock %}
 
                 <!-- Outer Frame Container -->
                 {% block content %}
+                    {# Top Container: in this template, it contains only  #}
+
                     {#
                         Content depends on the action (survey, questions, register, assesments, submit, etc)
                         Action are in ./subviews/content/
