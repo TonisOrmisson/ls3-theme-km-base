@@ -1,0 +1,30 @@
+<!-- Bootstrap Navigation Bar -->
+{% if(aSurveyInfo.class.navbar) %}
+<div class="{{ aSurveyInfo.class.navbar }} navbar-fixed-top" {{ aSurveyInfo.attr.navbar }}>
+    <div class="{{ aSurveyInfo.class.navbarheader }}  " {{ aSurveyInfo.attr.navbarheader }} >
+        <button type="button" class="{{ aSurveyInfo.class.navbartoggle }}" {{ aSurveyInfo.attr.navbartoggle }}  >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+
+        {# Logo option #}
+        {% if( aSurveyInfo.options.brandlogo == "on") %}
+            <div class="{{ aSurveyInfo.class.navbarbrand }} logo-container"  {{ aSurveyInfo.attr.navbarbrand }}  >
+                {{ image(aSurveyInfo.options.brandlogofile, aSurveyInfo.name, {"class": "logo img-responsive"}) }}
+            </div>
+        {% else %}
+            <div class="{{ aSurveyInfo.class.navbarbrand }}"  {{ aSurveyInfo.attr.navbarbrand }} >
+                {{ aSurveyInfo.options.generalTitle }}
+            </div>
+        {% endif %}
+    </div>
+    <div id="{{ aSurveyInfo.id.navbar }}" class="{{ aSurveyInfo.class.navbarcollapse }}" {{ aSurveyInfo.attr.navbarcollapse }} >
+        <ul class="{{ aSurveyInfo.class.navbarlink }} navbar-right" {{ aSurveyInfo.attr.navbarlink }}>
+            {{ include('./subviews/navigation/question_index_menu.twig') }}
+            {{ include('./subviews/navigation/language_changer_top_menu.twig') }}
+        </ul>
+    </div>
+</div>
+{% endif %}
