@@ -1,17 +1,21 @@
 body{
-   font-size: 130%;
+   font-size: 100%;
+   background-color: #f6f6f6;
 }
 
+#outerframeContainer{
+   margin-top:1.6em;
+}
 
 /* override fixed pixel font sizes to be dynamic */
 .navbar-brand {
-   font-size: 2em;
-   min-height: 2em;
+   font-size: 1.6em;
+   min-height: 1.2em;
 }
 
 .logo-container {
-   font-size: 2em;
-   line-height: 2em;
+   font-size: 1.6em;
+   line-height: 1.2em;
 }
 @media only screen and (max-device-width: 760px) {
    h1, .h3 {
@@ -26,20 +30,26 @@ body{
       font-size:1.2em;
    }
 }
+.question-container{
+   background-color: white;
+}
 
+.answer-item{
+   font-size: 1.4em;
+}
 /* Adjust sizes */
 .question-title-container{
-   font-size:1.6em;
+   font-size:2em;
 }
 
 .ls-answers{
-    padding-top: 1em;
+    padding-top: 2em;
     padding-bottom: 0em;
 }
 
 .ls-question-message, .dir-ltr .ls-questionhelp  {
    margin-left: 0em;
-   font-size: 1.3em;
+   font-size: 1.5em;
    text-transform: uppercase;
 }
 
