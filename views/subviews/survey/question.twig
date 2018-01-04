@@ -1,0 +1,17 @@
+{# Showing question code/number is a survey level setting, so it's inside the array aSurveyInfo #}
+{% set aShow        = aSurveyInfo.aShow   %}
+
+    <!-- Question {{ aQuestion.code }} -->
+
+    {# Question Text #}
+    {{ include('./subviews/survey/question_subviews/question_text_container.twig') }}
+    {{ include('./subviews/survey/question_subviews/survey_question_help.twig') }}
+
+    {# Valide message and help #}
+    {{ include('./subviews/survey/question_subviews/valid_message_and_help.twig') }}
+
+    {# Answers #}
+    {{ include('./subviews/survey/question_subviews/answers.twig') }}
+
+
+    <!-- End of question {{ aQuestion.code }} -->
