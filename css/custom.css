@@ -1,0 +1,36 @@
+body{
+   font-size: 130%;
+}
+
+/* override fixed pixel font sizes to be dynamic */
+.navbar-brand {
+   font-size: 2em;
+   min-height: 2em;
+}
+
+.logo-container {
+   font-size: 2em;
+   line-height: 2em;
+}
+@media only screen and (max-device-width: 760px) {
+   h1, .h3 {
+      font-size: 2em;
+   }
+
+   .h4 {
+      font-size: 1.7em;
+   }
+   .ls-question-help,
+   .ls-questionhelp{
+      font-size:1.2em;
+   }
+}
+
+/* Adjust sizes */
+.question-title-container{
+   font-size:1.6em;
+}
+
+.ls-answers{
+   padding-top: 0em;
+}
