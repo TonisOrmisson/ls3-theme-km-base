@@ -33,7 +33,8 @@ body{
 }
 
 .ls-answers{
-   padding-top: 1em;
+    padding-top: 1em;
+    padding-bottom: 0em;
 }
 
 .ls-question-message, .dir-ltr .ls-questionhelp  {
@@ -52,13 +53,22 @@ body{
    line-height: inherit;
    height:100%;
 }
-
-
 .question-title-container{
    padding-bottom: 0.2em;
 }
 
 
+/*override default bootstrap for the answers */
+.answer-container .form-group{
+    margin-bottom: 0.2em;
+}
+
+.answer-container ul {
+    margin-bottom: 0em;
+}
+.answer-container{
+    padding-bottom: 1.2em;
+}
 
 
 
