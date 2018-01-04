@@ -10,10 +10,9 @@ body{
    margin-top:1.6em;
 }
 
-.navbar-inverse {
-   color: white;
-   background-color: rgb(160,30,40);
-   border-color: rgb(160,30,40);
+.navbar{
+    background-color: rgba(160,30,40,0.8);
+    border-color: transparent;
 }
 
 
@@ -23,18 +22,28 @@ body{
 }
 /* override fixed pixel font sizes to be dynamic */
 .navbar-inverse .navbar-brand {
-   color: #ffffff;
+    letter-spacing: -0.05em;
+    color: #ffffff;
    font-size: 1.6em;
    min-height: 1.2em;
 }
 
 .navbar-inverse .navbar-nav > li > a {
+    letter-spacing: -0.05em;
    color: #ffffff;
 }
+
 
 .logo-container {
    font-size: 1.4em;
    line-height: 1.2em;
+}
+
+.navbar-nav, .logo-container{
+    color: white;
+    background-color: rgb(160,30,40);
+    border-color: rgb(160,30,40);
+
 }
 @media only screen and (max-device-width: 760px) {
    h1, .h3 {
@@ -69,6 +78,7 @@ body{
 .ls-label-question{
     color: #333;
     font-weight: bolder;
+    letter-spacing: -0.05em;
 }
 
 .ls-answers{
