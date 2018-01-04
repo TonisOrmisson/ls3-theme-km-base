@@ -1,7 +1,7 @@
 body{
     font-size: 130%;
     background-color: #f9f9f9;
-
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
 }
 
 
@@ -12,8 +12,8 @@ body{
 
 .navbar-inverse {
    color: white;
-   background-color: #CC0000;
-   border-color: #CC0000;
+   background-color: rgb(160,30,40);
+   border-color: rgb(160,30,40);
 }
 
 
