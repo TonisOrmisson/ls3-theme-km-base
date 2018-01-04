@@ -3,18 +3,19 @@
     <!-- Preview mode warning -->
     <div class="{{ aSurveyInfo.class.activealert }} alert alert-danger alert-dismissible fade in alert-dismissible" {{ aSurveyInfo.attr.activealert }} >
         <button  {{ aSurveyInfo.attr.activealertbutton }} class="{{ aSurveyInfo.class.activealertbutton }} close" ><span aria-hidden="true">×</span></button>
-        <div class="text-uppercase h4">{{ "This survey is currently not active. You will not be able to save your responses." | t }}</div>
+        <div class="text-uppercase h4">{{ "This survey is not yet active. Your response cannot be saved" | t }}</div>
     </div>
 {% endif %}
 
 {# Error Html warnings #}
 {% if aSurveyInfo.errorHtml.show %}
-    <p class=' {# Uncomment to hide when popup is on { aSurveyInfo.errorHtml.hiddenClass } #} fade in alert-dismissible alert alert-danger {{ aSurveyInfo.class.errorHtml }} ' role='alert'>
+    <div class=' {# Uncomment to hide when popup is on { aSurveyInfo.errorHtml.hiddenClass } #} fade in alert-dismissible alert alert-danger {{ aSurveyInfo.class.errorHtml }} ' role='alert'>
         <button  {{ aSurveyInfo.attr.errorHtmlbutton }} class="{{ aSurveyInfo.class.errorHtmlbutton }} close" ><span aria-hidden="true">×</span></button>
+    <ul>
     {% for aMessage in aSurveyInfo.errorHtml.messages  %}
         <!-- Error Html warnings -->
-            {{ aMessage }}
-            <br/>
+            <li>{{ aMessage }}</li>
     {% endfor %}
-    </p>
+    </ul>
+    </div>
 {% endif %}
