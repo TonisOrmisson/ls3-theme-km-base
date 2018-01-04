@@ -33,15 +33,25 @@ body{
 }
 
 .ls-answers{
-   padding-top: 0em;
+   padding-top: 1em;
 }
 
 .ls-question-message, .dir-ltr .ls-questionhelp  {
-   margin-left: 1.6em;
+   margin-left: 0em;
    font-size: 1.3em;
    text-transform: uppercase;
 }
 
+
+.ls-questionhelp:before{content:""}
+.ls-questionhelp:before {
+   display: block;
+   position:absolute;
+   font-family: FontAwesome;
+   font-size: inherit;
+   line-height: inherit;
+   height:100%;
+}
 
 
 .question-title-container{
