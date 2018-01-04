@@ -1,5 +1,5 @@
 body{
-   font-size: 100%;
+   font-size: 130%;
    background-color: #f9f9f9;
 }
 
@@ -31,7 +31,7 @@ body{
 }
 
 .logo-container {
-   font-size: 1.6em;
+   font-size: 1.4em;
    line-height: 1.2em;
 }
 @media only screen and (max-device-width: 760px) {
@@ -56,7 +56,10 @@ body{
 }
 /* Adjust sizes */
 .question-title-container{
-   font-size:2em;
+   font-size:1.6em;
+}
+.ls-label-question{
+   font-weight: bolder;
 }
 
 .ls-answers{
@@ -66,7 +69,7 @@ body{
 
 .ls-question-message, .dir-ltr .ls-questionhelp  {
    margin-left: 0em;
-   font-size: 1.5em;
+   font-size: 1.4em;
    text-transform: uppercase;
 }
 
