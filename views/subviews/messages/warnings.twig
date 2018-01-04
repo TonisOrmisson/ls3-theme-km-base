@@ -3,7 +3,7 @@
     <!-- Preview mode warning -->
     <div class="{{ aSurveyInfo.class.activealert }} alert alert-danger alert-dismissible fade in alert-dismissible" {{ aSurveyInfo.attr.activealert }} >
         <button  {{ aSurveyInfo.attr.activealertbutton }} class="{{ aSurveyInfo.class.activealertbutton }} close" ><span aria-hidden="true">×</span></button>
-        {{ "This survey is currently not active. You will not be able to save your responses." | t }}
+        <div class="text-uppercase h4">{{ "This survey is currently not active. You will not be able to save your responses." | t }}</div>
     </div>
 {% endif %}
 
