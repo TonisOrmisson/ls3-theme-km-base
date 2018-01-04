@@ -2,6 +2,7 @@ body{
    font-size: 130%;
 }
 
+
 /* override fixed pixel font sizes to be dynamic */
 .navbar-brand {
    font-size: 2em;
@@ -34,3 +35,20 @@ body{
 .ls-answers{
    padding-top: 0em;
 }
+
+.ls-question-message, .dir-ltr .ls-questionhelp  {
+   margin-left: 1.6em;
+   font-size: 1.3em;
+   text-transform: uppercase;
+}
+
+
+
+.question-title-container{
+   padding-bottom: 0.2em;
+}
+
+
+
+
+

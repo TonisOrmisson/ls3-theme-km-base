@@ -12,7 +12,7 @@
         <version>0.1</version>
         <apiVersion>3</apiVersion>
         <description><![CDATA[<strong>Base vanilla extension</strong><br>A clean base template.]]></description>
-        <last_update/>
+        <last_update>2018-01-04 10:15:37</last_update>
     <extends>vanilla</extends></metadata>
 
     <!--
