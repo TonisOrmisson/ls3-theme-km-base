@@ -1,0 +1,25 @@
+<!-- Welcome Message -->
+<div id="{{ aSurveyInfo.id.welcomecontainer }}" class="{{ aSurveyInfo.class.welcomecontainer }}" {{ aSurveyInfo.attr.welcomecontainer }}>
+
+    <!-- Welcome text -->
+    <div class="{{ aSurveyInfo.class.welcome }} h4 text-primary" {{ aSurveyInfo.attr.welcome }}>
+        {{ aSurveyInfo.welcome }}
+    </div>
+
+    <!-- Question count -->
+    <div class="{{ aSurveyInfo.class.questioncount }} text-muted" {{ aSurveyInfo.attr.questioncount }}>
+        <div class='{{ aSurveyInfo.class.questioncounttext }}' {{ aSurveyInfo.attr.questioncounttext }}>
+
+            {# If survey creator set "show x questions" in survey setting  #}
+            {% if aSurveyInfo.bShowxquestions == true %}
+                {% if aSurveyInfo.iTotalquestions < 1 %}
+                    {{ "There is no question in this survey" | t }}
+                {% elseif aSurveyInfo.iTotalquestions == 1  %}
+                    {{ "There is 1 question in this survey" | t }}
+                {% else %}
+                    {{ "There are" | t}} {{aSurveyInfo.iTotalquestions}} {{"questions in this survey." | t}}
+              {% endif %}
+            {% endif %}
+        </div>
+  </div>
+</div>
