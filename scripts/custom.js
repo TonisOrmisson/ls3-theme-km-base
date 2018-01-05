@@ -42,7 +42,7 @@ function hilightQuestionErrors() {
         // scroll to first error question
         $('html, body').animate({
             scrollTop: firstErrorQuestionContainer.offset().top -(navHeight * 2) - errorMessagesHeight
-        }, 50);
+        }, 0);
     }
 
 };
