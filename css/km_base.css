@@ -79,10 +79,6 @@ body{
    .h4 {
       font-size: 1.7em;
    }
-   .ls-question-help,
-   .ls-questionhelp{
-      font-size:1.2em;
-   }
 }
 
 
@@ -162,7 +158,7 @@ only screen and (max-width: 760px),
 
 .ls-question-message, .dir-ltr .ls-questionhelp  {
    margin-left: 0em;
-   font-size: 1.4em;
+   font-size: 1.1em;
    text-transform: uppercase;
 }
 
