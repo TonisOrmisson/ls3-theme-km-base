@@ -37,7 +37,7 @@ body{
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
    color: #fff;
-   background-color: #CC0000;
+   background-color: rgb(160,30,40);
 }
 /* override fixed pixel font sizes to be dynamic */
 .navbar-inverse .navbar-brand {
@@ -78,6 +78,10 @@ body{
 
 .question-container{
    background-color: white;
+}
+
+.question-hilight{
+    border-color: rgb(160,30,40);
 }
 
 .answer-item{
