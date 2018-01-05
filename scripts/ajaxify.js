@@ -80,7 +80,7 @@ var AjaxSubmitObject = function () {
             //start the loading animation
             startLoadingBar();
 
-            $(document).on('pjax:end', function(){
+            $(document).on('pjax:success', function(){
                 // hilight the errors
                 hilightQuestionErrors();
                 // We end the loading animation
