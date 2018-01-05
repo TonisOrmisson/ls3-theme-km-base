@@ -3,13 +3,7 @@ body{
     background-color: #f9f9f9;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
 }
-#ajax-loading {
-    background: url("../files/ajax-loader.gif") no-repeat scroll center center rgba(255,255,255,0.8);
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 1000;
-}
+
 .danger{
     background-color:  rgb(160,30,40);
 }
@@ -76,10 +70,19 @@ body{
     font-size: 1.3em;
 }
 
-.question-container{
-   background-color: white;
+.group-outer-container{
 }
-
+#ajax-loading {
+    background: url("../files/ajax-loader.gif") no-repeat scroll center center rgba(255,255,255,0.8);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+}
+.question-container{
+    position:relative;
+    background-color: white;
+}
 .question-hilight{
     border-color: rgb(160,30,40);
 }

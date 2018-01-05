@@ -85,6 +85,8 @@ var AjaxSubmitObject = function () {
             });
 
             $(document).on('pjax:scriptcomplete.onreload', function(){
+                // We end the loading animation
+                endLoadingBar();
                 //free submitting again
                 activeSubmit = false;
                 if (/<###begin###>/.test($('#beginScripts').text())) {
