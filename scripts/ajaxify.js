@@ -1,24 +1,3 @@
-/*
- *  LimeSurvey
- * Copyright (C) 2007-2011 The LimeSurvey Project Team / Carsten Schmitz
- * All rights reserved.
- * License: GNU/GPL License v2 or later, see LICENSE.php
- * LimeSurvey is free software. This version may have been modified pursuant
- * to the GNU General Public License, and as distributed it includes or
- * is derivative of works licensed under the GNU General Public License or
- * other free or open source software licenses.
- * See COPYRIGHT.php for copyright notices and details.
- */
-
-var startLoadingBar = function () {
-    $('#ajax-loading').show();
-};
-
-
-var endLoadingBar = function () {
-    $('#ajax-loading').hide();
-};
-
 
 // Submit the form with Ajax
 var AjaxSubmitObject = function () {
@@ -71,6 +50,8 @@ var AjaxSubmitObject = function () {
             $("#limesurvey").append("<input name='"+$(this).attr("name")+"' value='"+$(this).attr("value")+"' type='hidden' />");
         });
 
+
+
         // If the user try to submit the form
         // Always bind to document to not need to bind again
         $(document).on("submit", "#limesurvey", function (e) {
@@ -81,6 +62,12 @@ var AjaxSubmitObject = function () {
             if(activeSubmit) return;
             //block further submissions
             activeSubmit = true;
+
+            // check for unanswered mandatory on any ajax request
+            $(document).on('pjax:success', function(){
+                // hilight the errors
+                hilightQuestionErrors();
+            });
 
             $(document).on('pjax:scriptcomplete.onreload', function(){
                 // We end the loading animation
@@ -116,13 +103,10 @@ var AjaxSubmitObject = function () {
 $( document ).ready(function() {
     hilightQuestionErrors();
 });
-// check for unanswered mandatory on any ajax request
-$(document).on('pjax:success', function(){
-    // We end the loading animation
-    endLoadingBar();
-    // hilight the errors
-    //hilightQuestionErrors();
-});
+
+
+
+
 
 // check and hilight all unanswered questions
 function hilightQuestionErrors() {
@@ -134,33 +118,35 @@ function hilightQuestionErrors() {
             hasErrors = true;
             firstErrorQuestionContainer = $(this).closest(".question-container");
         }
-
         $( this )
             .closest(".question-container")
             .addClass("question-hilight");
     });
 
     if(hasErrors){
-        console.log(firstErrorQuestionContainer);
         var navHeight = $('.navbar').outerHeight();
         var errorMessages = $('.ls-questions-have-errors');
-
         var errorMessagesHeight = errorMessages.outerHeight();
-
         errorMessages.insertBefore(firstErrorQuestionContainer);
-
-        console.log(navHeight);
-        console.log(errorMessagesHeight);
-        console.log(firstErrorQuestionContainer.offset().top);
+        console.log(firstErrorQuestionContainer);
+        console.log(firstErrorQuestionContainer.offset().top -(navHeight * 2) - errorMessagesHeight);
 
         // scroll to first error question
         $('html, body').animate({
             scrollTop: firstErrorQuestionContainer.offset().top -(navHeight * 2) - errorMessagesHeight
-        }, 50);
+        }, 0);
     }
 
 };
 
+var startLoadingBar = function () {
+    $('#ajax-loading').show();
+};
+
+
+var endLoadingBar = function () {
+    $('#ajax-loading').hide();
+};
 
 
 
