@@ -22,6 +22,11 @@ body{
    margin-top:1.6em;
 }
 
+.space-col{
+    margin: 0;
+}
+
+
 .navbar-inverse {
    color: white;
    background-color: rgb(160,30,40);
@@ -70,7 +75,13 @@ body{
     font-size: 1.3em;
 }
 
-.group-outer-container{
+.group-container{
+    margin: 0;
+    padding: 0;
+}
+
+#navigator-container{
+    margin-top: 1.2em;
 }
 #ajax-loading {
     background: url("../files/ajax-loader.gif") no-repeat scroll center center rgba(255,255,255,0.8);
@@ -82,6 +93,8 @@ body{
 .question-container{
     position:relative;
     background-color: white;
+    margin-bottom: 0;
+    margin-top: 1.5em;
 }
 .question-hilight{
     border-color: rgb(160,30,40);
