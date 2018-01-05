@@ -4,7 +4,7 @@ body{
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
 }
 #ajax-loading {
-    background: url("../files/ajax-loader.gif") no-repeat scroll center center #FFF;
+    background: url("../files/ajax-loader.gif") no-repeat scroll center center rgba(255,255,255,0.8);
     position: absolute;
     height: 100%;
     width: 100%;
