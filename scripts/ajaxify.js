@@ -79,10 +79,12 @@ var AjaxSubmitObject = function () {
             activeSubmit = true;
             //start the loading animation
             startLoadingBar();
-
-            $(document).on('pjax:scriptcomplete.onreload', function(){
+            $(document).on('pjax:success', function(){
                 // We end the loading animation
                 endLoadingBar();
+            });
+
+            $(document).on('pjax:scriptcomplete.onreload', function(){
                 //free submitting again
                 activeSubmit = false;
                 if (/<###begin###>/.test($('#beginScripts').text())) {
