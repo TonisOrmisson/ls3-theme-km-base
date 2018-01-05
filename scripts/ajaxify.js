@@ -10,20 +10,23 @@
  * See COPYRIGHT.php for copyright notices and details.
  */
 
+var startLoadingBar = function () {
+    $('#ajax-loading').show();
+};
+
+
+var endLoadingBar = function () {
+    $('#ajax-loading').hide();
+};
+
+
 // Submit the form with Ajax
 var AjaxSubmitObject = function () {
     var activeSubmit = false;
     // First we get the value of the button clicked  (movenext, submit, prev, etc)
     var move = "";
 
-    var startLoadingBar = function () {
-        $('#ajax-loading').show();
-    };
 
-
-    var endLoadingBar = function () {
-        $('#ajax-loading').hide();
-    };
 
     var checkScriptNotLoaded = function(scriptNode){
         if(!!scriptNode.src){
@@ -107,6 +110,57 @@ var AjaxSubmitObject = function () {
         blockSubmit: function(){activeSubmit = true;}
     }
 }
+
+
+// check for unanswered mandatory on any page load
+$( document ).ready(function() {
+    hilightQuestionErrors();
+});
+// check for unanswered mandatory on any ajax request
+$(document).on('pjax:success', function(){
+    // We end the loading animation
+    endLoadingBar();
+    // hilight the errors
+    //hilightQuestionErrors();
+});
+
+// check and hilight all unanswered questions
+function hilightQuestionErrors() {
+    var hasErrors = false;
+    var firstErrorQuestionContainer;
+
+    $( ".ls-question-mandatory" ).each(function( i, obj ) {
+        if(i === 0){
+            hasErrors = true;
+            firstErrorQuestionContainer = $(this).closest(".question-container");
+        }
+
+        $( this )
+            .closest(".question-container")
+            .addClass("question-hilight");
+    });
+
+    if(hasErrors){
+        console.log(firstErrorQuestionContainer);
+        var navHeight = $('.navbar').outerHeight();
+        var errorMessages = $('.ls-questions-have-errors');
+
+        var errorMessagesHeight = errorMessages.outerHeight();
+
+        errorMessages.insertBefore(firstErrorQuestionContainer);
+
+        console.log(navHeight);
+        console.log(errorMessagesHeight);
+        console.log(firstErrorQuestionContainer.offset().top);
+
+        // scroll to first error question
+        $('html, body').animate({
+            scrollTop: firstErrorQuestionContainer.offset().top -(navHeight * 2) - errorMessagesHeight
+        }, 50);
+    }
+
+};
+
 
 
 
