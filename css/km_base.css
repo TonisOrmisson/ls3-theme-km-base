@@ -29,7 +29,19 @@ body{
    background-color: rgb(160,30,40);
    border-color: rgb(160,30,40);
 }
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+    border-color: rgb(160,30,40);
+}
 
+.navbar-inverse .navbar-toggle {
+    border-color: rgb(160,30,40);
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    border-color: rgb(160,30,40);
+    background-color: rgb(160,30,40);
+}
 .logo-container > img {
     max-height: 150px;
     padding: 0;
