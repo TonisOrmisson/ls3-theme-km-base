@@ -29,12 +29,19 @@ function hilightQuestionErrors() {
     if(hasErrors){
         console.log(firstErrorQuestionContainer);
         var navHeight = $('.navbar').outerHeight();
+        var errorMessages = $('.ls-questions-have-errors');
+
+        var errorMessagesHeight = errorMessages.outerHeight();
+
+        errorMessages.insertBefore(firstErrorQuestionContainer);
+
         console.log(navHeight);
-        console.log(firstErrorQuestionContainer.offset().top),
+        console.log(errorMessagesHeight);
+        console.log(firstErrorQuestionContainer.offset().top);
 
-
+        // scroll to first error question
         $('html, body').animate({
-            scrollTop: firstErrorQuestionContainer.offset().top - navHeight
+            scrollTop: firstErrorQuestionContainer.offset().top -(navHeight * 2) - errorMessagesHeight
         }, 50);
     }
 
