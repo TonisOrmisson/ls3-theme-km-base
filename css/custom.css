@@ -3,16 +3,35 @@ body{
     background-color: #f9f9f9;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
 }
+#ajax-loading {
+    background: url("../files/ajax-loader.gif") no-repeat scroll center center #FFF;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+}
+.danger{
+    background-color:  rgb(160,30,40);
+}
 
+.text-danger{
+    color: rgb(160,30,40);
+}
 
+.alert-danger{
+    color: #a01e28;
+    background-color: #f8d9db;
+    border-color: #f2b8bc;
+}
 
 #outerframeContainer{
    margin-top:1.6em;
 }
 
-.navbar{
-    background-color: rgba(160,30,40,0.8);
-    border-color: transparent;
+.navbar-inverse {
+   color: white;
+   background-color: rgb(160,30,40);
+   border-color: rgb(160,30,40);
 }
 
 
@@ -22,7 +41,8 @@ body{
 }
 /* override fixed pixel font sizes to be dynamic */
 .navbar-inverse .navbar-brand {
-    letter-spacing: -0.05em;
+    letter-spacing: -0.02em;
+    font-weight: bold;
     color: #ffffff;
    font-size: 1.6em;
    min-height: 1.2em;
@@ -33,17 +53,9 @@ body{
    color: #ffffff;
 }
 
-
 .logo-container {
    font-size: 1.4em;
    line-height: 1.2em;
-}
-
-.navbar-nav, .logo-container{
-    color: white;
-    background-color: rgb(160,30,40);
-    border-color: rgb(160,30,40);
-
 }
 @media only screen and (max-device-width: 760px) {
    h1, .h3 {
@@ -153,4 +165,22 @@ body{
 .eoo{
     font-weight:normal;
     font-style:italic;
+}
+
+
+/*......... progress-bar .............*/
+.progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #8D8B7C;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
 }
