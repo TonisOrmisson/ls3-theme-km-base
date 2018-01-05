@@ -79,7 +79,6 @@ var AjaxSubmitObject = function () {
             //block further submissions
             activeSubmit = true;
 
-
             $(document).on('pjax:scriptcomplete.onreload', function(){
                 // We end the loading animation
                 endLoadingBar();

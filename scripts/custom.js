@@ -6,10 +6,10 @@ $( document ).ready(function() {
 });
 // check for unanswered mandatory on any ajax request
 $(document).on('pjax:success', function(){
-    // hilight the errors
-    hilightQuestionErrors();
     // We end the loading animation
     endLoadingBar();
+    // hilight the errors
+    hilightQuestionErrors();
 });
 
 // check and hilight all unanswered questions
