@@ -9,9 +9,9 @@
         <authorEmail>tonis@andmemasin.eu</authorEmail>
         <authorUrl>https://andmemasin.eu</authorUrl>
         <copyright>Copyright (C) 2017 - 2018 KuddelMuddel OÜ. All rights reserved.</copyright>
-        <version>0.1</version>
+        <version>0.1.1</version>
         <apiVersion>3</apiVersion>
-        <description><![CDATA[<strong>Base vanilla extension</strong><br>A clean base template.]]></description>
+        <description><![CDATA[<strong>KuddelMuddel Base template</strong><br>Base vanilla extension.]]></description>
         <last_update>2018-01-04 10:15:37</last_update>
     <extends>vanilla</extends></metadata>
 
@@ -40,11 +40,11 @@
     <options>
         <generalTitle>Survey</generalTitle>
         <ajaxmode>on</ajaxmode>
-        <animatebody>off</animatebody>
+        <animatebody>on</animatebody>
         <container>on</container>
         <bodyanimation>fadeInRight</bodyanimation>
-        <brandlogo>on</brandlogo>
-        <brandlogofile>./files/logosss.png</brandlogofile>
+        <brandlogo>off</brandlogo>
+        <brandlogofile>./files/logo.png</brandlogofile>
         <font>noto</font>
         <font2>noto</font2>
     </options>
