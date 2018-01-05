@@ -5,8 +5,11 @@ $( document ).ready(function() {
     hilightQuestionErrors();
 });
 // check for unanswered mandatory on any ajax request
-$(document).on("ready pjax:scriptcomplete", function(){
+$(document).on('pjax:success', function(){
+    // hilight the errors
     hilightQuestionErrors();
+    // We end the loading animation
+    endLoadingBar();
 });
 
 // check and hilight all unanswered questions
@@ -42,7 +45,7 @@ function hilightQuestionErrors() {
         // scroll to first error question
         $('html, body').animate({
             scrollTop: firstErrorQuestionContainer.offset().top -(navHeight * 2) - errorMessagesHeight
-        }, 0);
+        }, 50);
     }
 
 };

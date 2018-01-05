@@ -78,15 +78,7 @@ var AjaxSubmitObject = function () {
             if(activeSubmit) return;
             //block further submissions
             activeSubmit = true;
-            //start the loading animation
-            startLoadingBar();
 
-            $(document).on('pjax:success', function(){
-                // hilight the errors
-                hilightQuestionErrors();
-                // We end the loading animation
-                endLoadingBar();
-            });
 
             $(document).on('pjax:scriptcomplete.onreload', function(){
                 // We end the loading animation
