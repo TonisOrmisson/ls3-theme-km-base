@@ -3,7 +3,7 @@ body{
     background-color: #f9f9f9;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
 }
-#ajax_loading_indicator {
+#ajax-loading {
     background: url("../files/ajax-loader.gif") no-repeat scroll center center #FFF;
     position: absolute;
     height: 100%;
