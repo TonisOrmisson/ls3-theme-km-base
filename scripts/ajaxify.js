@@ -79,7 +79,10 @@ var AjaxSubmitObject = function () {
             activeSubmit = true;
             //start the loading animation
             startLoadingBar();
-            $(document).on('pjax:success', function(){
+
+            $(document).on('pjax:end', function(){
+                // hilight the errors
+                hilightQuestionErrors();
                 // We end the loading animation
                 endLoadingBar();
             });

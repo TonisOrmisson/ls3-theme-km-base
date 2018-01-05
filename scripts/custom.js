@@ -8,10 +8,6 @@ $( document ).ready(function() {
 $(document).on("ready pjax:scriptcomplete", function(){
     hilightQuestionErrors();
 });
-// on all clicks
-$(document).on("click", ".ls-move-btn",function () {
-    hilightQuestionErrors();
-});
 
 // check and hilight all unanswered questions
 function hilightQuestionErrors() {
