@@ -64,6 +64,7 @@ var AjaxSubmitObject = function () {
         });
         // Always bind to document to not need to bind again
         $(document).on("click", ".ls-move-btn",function () {
+            startLoadingBar();
             $("#limesurvey").append("<input name='"+$(this).attr("name")+"' value='"+$(this).attr("value")+"' type='hidden' />");
         });
 
@@ -84,7 +85,7 @@ var AjaxSubmitObject = function () {
                 // hilight the errors
                 hilightQuestionErrors();
                 // We end the loading animation
-                endLoadingBar();
+                //endLoadingBar();
             });
 
             $(document).on('pjax:scriptcomplete.onreload', function(){
