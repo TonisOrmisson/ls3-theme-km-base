@@ -22,7 +22,7 @@ var AjaxSubmitObject = function () {
 
 
     var endLoadingBar = function () {
-        $('#ajax-loading').hide(100);
+        $('#ajax-loading').hide();
     };
 
     var checkScriptNotLoaded = function(scriptNode){
