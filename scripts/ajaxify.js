@@ -67,6 +67,8 @@ var AjaxSubmitObject = function () {
             $(document).on('pjax:success', function(){
                 // hilight the errors
                 hilightQuestionErrors();
+                // We end the loading animation
+                endLoadingBar();
             });
 
             $(document).on('pjax:scriptcomplete.onreload', function(){
@@ -103,8 +105,6 @@ var AjaxSubmitObject = function () {
 $( document ).ready(function() {
     hilightQuestionErrors();
 });
-
-
 
 
 
