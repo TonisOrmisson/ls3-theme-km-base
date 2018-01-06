@@ -151,3 +151,13 @@ var endLoadingBar = function () {
 
 
 
+// disable arrow keys changing radio selection
+$('body').keypress(function(e) {
+    console.log(e.w);
+    var arrowKeys = [37, 38, 39, 40];
+    if (arrowKeys.indexOf(e.which) !== -1) {
+        $(this).blur();
+        console.log(e);
+        return false;
+    }
+});
