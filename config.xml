@@ -13,7 +13,8 @@
         <apiVersion>3</apiVersion>
         <description><![CDATA[<strong>KuddelMuddel Base template</strong><br>Base vanilla extension.]]></description>
         <last_update>2018-01-04 10:15:37</last_update>
-    <extends>vanilla</extends></metadata>
+        <extends>vanilla</extends>
+    </metadata>
 
     <!--
         Here the list of the css/js files to add to the template package.
