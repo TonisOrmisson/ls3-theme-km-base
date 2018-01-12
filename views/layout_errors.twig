@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ aSurveyInfo.languagecode }}" dir="{{ aSurveyInfo.dir }}" class="{{ aSurveyInfo.languagecode }} dir-{{ aSurveyInfo.dir }} {{ aSurveyInfo.class.html }}" {{ aSurveyInfo.attr.html }}>
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            {{"Error"| t }}
+        </title>
+    </head>
+
+    <body  class="{{ aSurveyInfo.class.body }} lang-{{surveylanguage}} {{surveyformat}}" marginwidth="0" marginheight="0" {{ aSurveyInfo.attr.body }}>
+
+    <div class="container">
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <h1><span class="fa fa-exclamation text-danger"></span> {{"Error"| t }}</h1>
+           git <a href="javascript:document.location.reload(true);" class="btn btn-default btn-lg text-center"><span class="green">Try This Page Again</span></a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-6">
+
+                    <h2>{{"What happened?"| t }}</h2>
+                    <p class="lead">{{"An error occurred."| t }} :)</p>
+                </div>
+                <div class="col-md-6">
+                    <h2>{{"What can I do?"| t }}</h2>
+                    <p class="lead">If you're a site visitor</p>
+                    <p>Nothing you can do at the moment. If you need immediate assistance, please send us an email instead. We apologize for any inconvenience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>
