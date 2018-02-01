@@ -35,7 +35,7 @@
                         Content depends on the action (survey, questions, register, assesments, submit, etc)
                         Action are in ./subviews/content/
                     #}
-                    {% set sViewContent =  './subviews/content/' ~ aSurveyInfo.include_content %}
+                    {% set sViewContent =  './subviews/content/' ~ aSurveyInfo.include_content ~ '.twig' %}
                     {% include './subviews/content/outerframe.twig' with {'include_content': sViewContent } %}
                 {% endblock %}
 
