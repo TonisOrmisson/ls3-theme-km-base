@@ -1,3 +1,5 @@
+{% set aError     = aSurveyInfo.aError    %}
+
 <!DOCTYPE html>
 <html lang="{{ aSurveyInfo.languagecode }}" dir="{{ aSurveyInfo.dir }}" class="{{ aSurveyInfo.languagecode }} dir-{{ aSurveyInfo.dir }} {{ aSurveyInfo.class.html }}" {{ aSurveyInfo.attr.html }}>
 
@@ -24,13 +26,15 @@
             <div class="row">
                 <div class="col-md-6">
 
-                    <h2>{{"What happened?"| t }}</h2>
-                    <p class="lead">{{"An error occurred."| t }} :)</p>
+                    <h2>{{ aError.title }}</h2>
+                    <p class="lead">
+                        {{ aError.message }}
+                    </p>
                 </div>
                 <div class="col-md-6">
                     <h2>{{"What can I do?"| t }}</h2>
-                    <p class="lead">If you're a site visitor</p>
-                    <p>Nothing you can do at the moment. If you need immediate assistance, please send us an email instead. We apologize for any inconvenience.</p>
+                    <p class="lead">{{gT("For further information please contact %s:")|format (aSurveyInfo.adminname)}}<br>
+                    <a href='mailto:{{ aSurveyInfo.adminemail }}'>{{ aSurveyInfo.adminemail }}</p>
                 </div>
             </div>
         </div>
