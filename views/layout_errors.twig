@@ -18,22 +18,18 @@
         <!-- Jumbotron -->
         <div class="jumbotron">
             <h1><span class="fa fa-exclamation text-danger"></span> {{"Error"| t }}</h1>
-           git <a href="javascript:document.location.reload(true);" class="btn btn-default btn-lg text-center"><span class="green">Try This Page Again</span></a>
+            <h2>{{ aError.title }}</h2>
+            <p class="lead">
+                {{ aError.message }}
+            </p>
         </div>
     </div>
     <div class="container">
         <div class="body-content">
             <div class="row">
-                <div class="col-md-6">
-
-                    <h2>{{ aError.title }}</h2>
-                    <p class="lead">
-                        {{ aError.message }}
-                    </p>
-                </div>
-                <div class="col-md-6">
-                    <h2>{{"What can I do?"| t }}</h2>
-                    <p class="lead">{{gT("For further information please contact %s:")|format (aSurveyInfo.adminname)}}<br>
+                <div class="col-md-12">
+                    <h2>Mida ma teha saan?</h2>
+                    <p class="lead">{{gT("Lisainfo saamiseks kontakteeru uuringu administraatoriga %s:")|format (aSurveyInfo.adminname)}}<br>
                     <a href='mailto:{{ aSurveyInfo.adminemail }}'>{{ aSurveyInfo.adminemail }}</p>
                 </div>
             </div>
