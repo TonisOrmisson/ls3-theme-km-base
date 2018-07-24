@@ -2,15 +2,6 @@ body{
     font-size: 130%;
     background-color: #f9f9f9;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
-
-    /* never break words */
-    word-break: unset !important;
-    word-wrap: unset !important;;
-    overflow-wrap: unset !important;;
-    -webkit-hyphens: unset !important;;
-    -moz-hyphens: unset !important;;
-    -ms-hyphens: unset !important;;
-    hyphens: unset !important;;
 }
 
 .danger{
@@ -158,6 +149,12 @@ only screen and (max-width: 760px),
     color: #333;
     font-weight: bolder;
     letter-spacing: -0.05em;
+
+    /* never break words with hyphens */
+    -webkit-hyphens: none !important;
+    -moz-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
 }
 
 .ls-answers{
