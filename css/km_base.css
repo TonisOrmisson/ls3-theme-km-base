@@ -139,7 +139,7 @@ only screen and (max-width: 760px),
 }
 
 .answer-item{
-   font-size: 1.4em;
+   font-size: 1.3em;
 }
 /* Adjust sizes */
 .question-title-container{
@@ -221,8 +221,10 @@ only screen and (max-width: 760px),
 
 /*......... custom things .............*/
 .eoo{
+    font-size: 0.9em;
     font-weight:normal;
     font-style:italic;
+    color: #8c8c8c;
 }
 
 
