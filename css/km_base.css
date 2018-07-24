@@ -2,6 +2,15 @@ body{
     font-size: 130%;
     background-color: #f9f9f9;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+
+    /* never break words */
+    word-break: unset;
+    word-wrap: unset;
+    overflow-wrap: unset;
+    -webkit-hyphens: unset;
+    -moz-hyphens: unset;
+    -ms-hyphens: unset;
+    hyphens: unset;
 }
 
 .danger{
