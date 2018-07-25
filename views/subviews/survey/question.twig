@@ -1,6 +1,13 @@
 {# Showing question code/number is a survey level setting, so it's inside the array aSurveyInfo #}
 {% set aShow        = aSurveyInfo.aShow   %}
 
+    {# Display question code for testing while not activated) #}
+    {% if aSurveyInfo.active != 'Y' %}
+        <div class='admin-question-code'>
+            [{{ aQuestion.code }}]
+        </div>
+    {% endif %}
+
     <!-- Question {{ aQuestion.code }} -->
 
     {# Question Text #}

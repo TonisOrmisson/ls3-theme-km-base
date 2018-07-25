@@ -1,10 +1,21 @@
 
+//Check if we have to work on IE10 *sigh*
+var isIE10 = false;
+/*@cc_on
+    if (/^10/.test(@_jscript_version)) {
+        isIE10 = true;
+    }
+@*/
+console.ls.log("isIE10: ", isIE10);
+
+
 // Submit the form with Ajax
 var AjaxSubmitObject = function () {
     var activeSubmit = false;
     // First we get the value of the button clicked  (movenext, submit, prev, etc)
     var move = "";
 
+    $('#ajax-loading').show();
 
 
     var checkScriptNotLoaded = function(scriptNode){

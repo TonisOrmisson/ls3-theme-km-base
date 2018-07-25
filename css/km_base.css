@@ -250,3 +250,11 @@ only screen and (max-width: 760px),
     -o-transition: width .6s ease;
     transition: width .6s ease;
 }
+
+/*......... the question code always visible while survey not activated .............*/
+.admin-question-code {
+    float: right;
+    margin-left: -10em;
+    font-weight: bold;
+    color: #cccccc;
+}
