@@ -14,6 +14,9 @@
             <div class="{{ aSurveyInfo.class.navbarbrand }} logo-container"  {{ aSurveyInfo.attr.navbarbrand }}  >
                 {{ image(aSurveyInfo.options.brandlogofile, aSurveyInfo.options.generalTitle, {"class": "logo img-responsive"}) }}
             </div>
+            <div class="{{ aSurveyInfo.class.navbarbrand }}"  {{ aSurveyInfo.attr.navbarbrand }} >
+                {{ aSurveyInfo.options.generalTitle }}
+            </div>
         {% else %}
             <div class="{{ aSurveyInfo.class.navbarbrand }}"  {{ aSurveyInfo.attr.navbarbrand }} >
                 {{ aSurveyInfo.options.generalTitle }}
