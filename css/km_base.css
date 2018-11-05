@@ -258,3 +258,7 @@ only screen and (max-width: 760px),
     font-weight: bold;
     color: #cccccc;
 }
+
+.ls-label-xs-visibility {
+    white-space: normal;
+}
