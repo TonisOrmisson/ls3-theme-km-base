@@ -9,7 +9,7 @@
         <authorEmail>tonis@andmemasin.eu</authorEmail>
         <authorUrl>https://andmemasin.eu</authorUrl>
         <copyright>Copyright (C) 2017 - 2018 KuddelMuddel OÜ. All rights reserved.</copyright>
-        <version>0.4.0</version>
+        <version>0.5.0</version>
         <apiVersion>3</apiVersion>
         <description><![CDATA[<strong>KuddelMuddel Base template</strong><br>Base vanilla extension.]]></description>
         <last_update>2018-07-25 10:36:37</last_update>
