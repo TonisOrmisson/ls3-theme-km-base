@@ -8,3 +8,12 @@ $('input[type="radio"]').keydown(function(e)
         return false;
     }
 });
+
+function togglesDiv(divsId){
+    var catdiv = document.getElementById(divsId);
+    if(catdiv.style.display == ""){
+        catdiv.style.display = "none";
+    } else {
+        catdiv.style.display = "";
+    }
+}
