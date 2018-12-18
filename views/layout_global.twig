@@ -14,12 +14,12 @@
         <div id="beginScripts" class="script-container">
             <###begin###>
         </div>
-
         {# Ajaxify cannot handle an element that is a direct child of body, so => create simple wrapper section #}
         <article>
 
             <div id="{{ aSurveyInfo.id.dynamicreload }}">
             {% block body %}
+                {{ oToken.survey.defaultlanguage.surveyls_title }}
 
                 {# Bootstrap Navigation Bar: the top menu #}
                 {% block nav_bar %}
