@@ -181,6 +181,9 @@ only screen and (max-width: 760px),
 .question-title-container{
    padding-bottom: 0.2em;
 }
+.form-horizontal .answer-item .control-label {
+    text-align: left;
+}
 
 
 /*override default bootstrap for the answers */
