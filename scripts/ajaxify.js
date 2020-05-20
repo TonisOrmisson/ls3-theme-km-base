@@ -1,3 +1,23 @@
+/*
+    LimeSurvey
+
+    Copyright (C) 2007-2017 The LimeSurvey Project Team / Louis Gac
+    All rights reserved.
+
+    License: GNU/GPL License v2 or later, see LICENSE.php
+    LimeSurvey is free software. This version may have been modified pursuant
+    to the GNU General Public License, and as distributed it includes or
+    is derivative of works licensed under the GNU General Public License or
+    other free or open source software licenses.
+    See COPYRIGHT.php for copyright notices and details.
+
+
+    (¯`·._.·(¯`·._.·   Ajax Mode ·._.·´¯)·._.·´¯)
+
+    This script deal with the new optional ajax system.
+
+
+*/
 
 //Check if we have to work on IE10 *sigh*
 var isIE10 = false;
@@ -15,14 +35,27 @@ var AjaxSubmitObject = function () {
     var move = '';
 
     var startLoadingBar = function () {
-        $('#ajax-loading').show();
+        //Scroll to the top of the page
+        window.scrollTo(0, 0);
+        $('#ajax_loading_indicator').css('display', 'block').find('#ajax_loading_indicator_bar').css({
+            'width': '20%',
+            'display': 'block'
+        });
     };
 
 
     var endLoadingBar = function () {
-        $('#ajax-loading').hide();
+        $('#ajax_loading_indicator').css('opacity', '0').find('#ajax_loading_indicator_bar').css('width', '100%');
+        setTimeout(function () {
+            $('#ajax_loading_indicator').css({
+                'display': 'none',
+                'opacity': 1
+            }).find('#ajax_loading_indicator_bar').css({
+                'width': '0%',
+                'display': 'none'
+            });
+        }, 1800);
     };
-
 
     var checkScriptNotLoaded = function (scriptNode) {
         if (scriptNode.src) {
@@ -78,7 +111,7 @@ var AjaxSubmitObject = function () {
         // Restrict to [type=submit]:not([data-confirmedby])
         // - :submit is the default if button don't have type (reset button on slider for example),
         // - confirmedby have their own javascript system
-        $(document).on('click', '#ls-button-submit, #ls-button-previous', function (e) {
+        $(document).on('click', '.action--ls-button-submit, .action--ls-button-previous', function (e) {
             $('#limesurvey').append('<input id="onsubmitbuttoninput" name=\'' + $(this).attr('name') + '\' value=\'' + $(this).attr('value') + '\' type=\'hidden\' />');
             if (isIE10 || /Edge\/\d+\.\d+/.test(navigator.userAgent)) {
                 e.preventDefault();
@@ -93,9 +126,13 @@ var AjaxSubmitObject = function () {
             // Prevent multiposting
             //Check if there is an active submit
             //If there is -> return immediately
-            if (activeSubmit) return;
+            if (activeSubmit) {
+                e.preventDefault();
+                return false;
+            }
             //block further submissions
             activeSubmit = true;
+            $('.action--ls-button-submit, .action--ls-button-previous').prop('disabled', true).addClass('btn-disabled');
             if ($('#onsubmitbuttoninput').length == 0) {
                 $('#limesurvey').append('<input id="onsubmitbuttoninput" name=\'' + $('#limesurvey [type=submit]:not([data-confirmedby])').attr('name') + '\' value=\'' + $('#limesurvey [type=submit]:not([data-confirmedby])').attr('value') + '\' type=\'hidden\' />');
             }
@@ -105,10 +142,10 @@ var AjaxSubmitObject = function () {
             $(document).on('pjax:scriptcomplete.onreload', function () {
                 // We end the loading animation
                 endLoadingBar();
-                hilightQuestionErrors();
-
                 //free submitting again
                 activeSubmit = false;
+                $('.action--ls-button-submit, .action--ls-button-previous').prop('disabled', false).removeClass('btn-disabled');
+
                 if (/<###begin###>/.test($('#beginScripts').text())) {
                     $('#beginScripts').text('');
                 }
@@ -136,6 +173,9 @@ var AjaxSubmitObject = function () {
     };
 };
 
+
+
+// custom stuff here
 // check and hilight all unanswered questions
 function hilightQuestionErrors() {
     var hasErrors = false;

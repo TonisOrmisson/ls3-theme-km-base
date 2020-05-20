@@ -8,11 +8,11 @@
         <author>admin</author>
         <authorEmail>tonis@andmemasin.eu</authorEmail>
         <authorUrl>https://andmemasin.eu</authorUrl>
-        <copyright>Copyright (C) 2017 - 2019 KuddelMuddel OÜ. All rights reserved.</copyright>
-        <version>0.6.0</version>
+        <copyright>Copyright (C) 2017 - 2020 Tõnis Ormisson.</copyright>
+        <version>0.7.0</version>
         <apiVersion>3</apiVersion>
-        <description><![CDATA[<strong>KuddelMuddel Base template</strong><br>Base vanilla extension.]]></description>
-        <last_update>2019-04-08 10:12:49</last_update>
+        <description><strong>KuddelMuddel Base template</strong></description>
+        <last_update>2020-05-18 10:50:49</last_update>
         <extends>vanilla</extends>
     </metadata>
 
