@@ -118,6 +118,10 @@ only screen and (max-width: 760px),
     padding: 0;
 }
 
+.ls-group-dynamic.ls-group-total {
+    text-align: left;
+}
+
 #navigator-container{
     margin-top: 1.2em;
 }
