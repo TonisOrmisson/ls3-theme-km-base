@@ -9,10 +9,10 @@
         <authorEmail>tonis@andmemasin.eu</authorEmail>
         <authorUrl>https://andmemasin.eu</authorUrl>
         <copyright>Copyright (C) 2017 - 2022 Tõnis Ormisson.</copyright>
-        <version>0.8.1</version>
+        <version>0.8.2</version>
         <apiVersion>3</apiVersion>
         <description><strong>KuddelMuddel Base template</strong></description>
-        <last_update>2022-07-06 13:12:00</last_update>
+        <last_update>2022-07-06 14:48:00</last_update>
         <extends>vanilla</extends>
     </metadata>
 

@@ -1,7 +1,7 @@
 // disable arrow keys changing radio selection
 $('input[type="radio"]').keydown(function(e)
 {
-    var arrowKeys = [37, 38, 39, 40];
+    let arrowKeys = [37, 38, 39, 40];
     if (arrowKeys.indexOf(e.which) !== -1) {
         $(this).blur();
         console.log(e);
@@ -10,7 +10,7 @@ $('input[type="radio"]').keydown(function(e)
 });
 
 function togglesDiv(divsId){
-    var catdiv = document.getElementById(divsId);
+    let catdiv = document.getElementById(divsId);
     if(catdiv.style.display === ""){
         catdiv.style.display = "none";
     } else {
@@ -22,8 +22,8 @@ function togglesDiv(divsId){
 function maxDiff(qID, randomize) {
 
     // Identify some elements
-    var thisQuestion = $('#question'+qID);
-    var thisTable = $('table.subquestion-list:eq(0)', thisQuestion);
+    let thisQuestion = $('#question' + qID);
+    let thisTable = $('table.subquestion-list:eq(0)', thisQuestion);
 
     // Assign a new question class
     $(thisQuestion).addClass('max-diff-array');
@@ -36,7 +36,7 @@ function maxDiff(qID, randomize) {
 
     // Random rows
     if(randomize) {
-        var rowsArr = [];
+        let rowsArr = [];
         $('tr.answers-list', thisTable).each(function(i){
             $(this).attr('data-index', i);
             rowsArr.push(i);
@@ -48,17 +48,26 @@ function maxDiff(qID, randomize) {
     }
 
     // Prevent clicking twice in the same row
-    $('input.radio', thisQuestion).on('click', function () {
+    $('.answer-item', thisQuestion).on('click', function (i) {
 
-        $('input.radio', thisQuestion).prop('disabled', false);
-        $('input.radio:checked', thisQuestion).each(function(i) {
-            var thisRow = $(this).closest('tr.answers-list');
-            $('input.radio', thisRow).not(this).prop('disabled', true);
+        // allow all clicks
+        $('.answer-item', thisQuestion).each(function (){
+            $(this).css('pointer-events', 'auto');
+        });
+
+        $('input:radio:checked', thisQuestion).each(function(i) {
+            let thisRow = $(this).closest('tr.answers-list');
+            let radio = $('input:radio', thisRow).not(this);
+            let thisRowLabel = radio.next('label');
+
+            // disallow clicking on the same row other end
+            radio.closest('.answer-item').css('pointer-events', 'none');
+            thisRowLabel.css('pointer-events', 'none');
+
         });
     });
 
     // Fix up the row classes
-    var rowClass = 1;
     $('tr.answers-list', thisTable).each(function(i) {
         $(this).addClass('array'+(2-(i%2)));
     });
