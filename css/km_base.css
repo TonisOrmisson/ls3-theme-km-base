@@ -286,3 +286,92 @@ video {
     min-width: 100%;
     min-height: 100%
 }
+
+
+/** maxDiff remove responsive splitting **/
+.max-diff-array th.answertext {
+    text-align: center;
+    border-right: 3px solid #FFFFFF;
+    border-left: 3px solid #FFFFFF;
+}
+
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    .max-diff-array table.ls-answers {
+        display: table;
+    }
+
+    .max-diff-array table.ls-answers thead {
+        display: table-header-group;
+    }
+
+    .max-diff-array table.ls-answers tbody {
+        display: table-row-group;
+    }
+
+    .max-diff-array table.ls-answers tr {
+        display: table-row;
+    }
+
+    .max-diff-array table.ls-answers tr.ls-hidden {
+        display: none;
+    }
+
+    .max-diff-array table.ls-answers th,
+    .max-diff-array table.ls-answers td {
+        display: table-cell;
+    }
+
+    .dir-ltr .max-diff-array table.ls-answers th,
+    .dir-ltr .max-diff-array table.ls-answers td {
+        text-align: center;
+    }
+
+    .dir-ltr .max-diff-array table.ls-answers tbody th.answertext {
+        text-align: right;
+    }
+
+    .max-diff-array-array table.ls-answers tbody td {
+        text-align:left;
+    }
+
+
+    .dir-ltr .max-diff-array .ls-answers td.radio-item,
+    .dir-ltr .max-diff-array .ls-answers td.checkbox-item {
+        padding: 8px 0;
+    }
+
+    .max-diff-array table.ls-answers tbody .control-label {
+        text-align:left
+    }
+
+    .max-diff-array table.ls-answers .ls-label-xs-visibility {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        width: 17px;
+        height: 17px;
+        line-height: 21px;
+        text-indent: 21px;
+        left: auto;
+        margin-left: -20px;
+    }
+
+    .dir-ltr .max-diff-array table.ls-answers .radio-item label.ls-label-xs-visibility::before,
+    .dir-ltr .max-diff-array table.ls-answers .checkbox-item label.ls-label-xs-visibility::before {
+        margin-left: 0px;
+    }
+
+    .dir-ltr .max-diff-array table.ls-answers .radio-item label.ls-label-xs-visibility::after,
+    .dir-ltr .max-diff-array table.ls-answers .checkbox-item label.ls-label-xs-visibility::after {
+        margin-left: 0px;
+    }
+
+    .max-diff-array table.ls-answers > tbody > tr:hover {
+        background-color: inherit;
+    }
+}
+
+
+
