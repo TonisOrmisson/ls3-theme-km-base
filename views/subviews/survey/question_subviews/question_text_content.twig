@@ -17,6 +17,9 @@
     </span>
 {% endif %}
 
+{# ALWAYS keep an invisble tag with question code to parse from #}
+<qcode style="display: none">{{ aQuestion.code }}</qcode>
+
 {# If the question code is to be shown (set in survey settings) #}
 {% if (aShow.question_code) %}
     <span class='{{ aSurveyInfo.class.questioncode }}' {{ aSurveyInfo.attr.questioncode }}>
@@ -24,7 +27,7 @@
     </span>
 {% endif %}
 
-{# The question text as entered by the survey creator in question editing #}
+{# The question+ text as entered by the survey creator in question editing #}
 <div class="{{ aSurveyInfo.class.questiontext }}" {{ aSurveyInfo.attr.questiontext }}>
     <div id="ls-question-text-{{ aQuestion.SGQ }}" class="{{ aSurveyInfo.class.lsquestiontext }}" {{ aSurveyInfo.attr.lsquestiontext }}>
         {{ aQuestion.text | raw }}
