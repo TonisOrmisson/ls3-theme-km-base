@@ -9,7 +9,7 @@
         <authorEmail>tonis@andmemasin.eu</authorEmail>
         <authorUrl>https://andmemasin.eu</authorUrl>
         <copyright>Copyright (C) 2017 - 2023 Tõnis Ormisson.</copyright>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
         <apiVersion>3</apiVersion>
         <description><strong>KuddelMuddel Base template</strong></description>
         <last_update>2023-09-11</last_update>
