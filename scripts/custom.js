@@ -18,6 +18,13 @@ $('input[type="radio"]').keydown(function(e)
     }
 });
 
+// disable submit button after being clicked once to avoid multiple submissions
+$("#ls-button-submit").on('click', function (event) {
+    event.preventDefault();
+    let button = $(this);
+    button.prop('disabled', true);
+});
+
 function togglesDiv(divsId){
     let catdiv = document.getElementById(divsId);
     if(catdiv.style.display === ""){
